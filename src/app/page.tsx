@@ -19,7 +19,7 @@ const MAX_GENERATIONS = parseInt(
   10
 );
 
-async function getAccessToken(code) {
+async function getAccessToken(code: string) {
   const requestData = new URLSearchParams({
     grant_type: "authorization_code",
     client_id: CLIENT_ID!,
