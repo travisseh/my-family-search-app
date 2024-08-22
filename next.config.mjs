@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
+  exportPathMap: async function () {
+    return {
+      "/": { page: "/" },
+      "/about": { page: "/about" },
+      // Add other routes as needed
+    };
   },
 };
 
